@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "AdiHaus";
+  src: URL("https://assets.codepen.io/6060109/adihaus_regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AdiHaus";
+  src: url("https://assets.codepen.io/6060109/adihaus_bold.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --blue-color: #2f80ed;
+  --black: #423a3a;
+  --light-gray: #d8d8d8;
+}
+
+html,
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "AdiHaus";
+}
+
+body {
+  background: url("./img/waves.webp");
+  background-size: cover;
+  text-align: center;
+}
+
+/* First h2 must be var(--blue-color) and font normal
+Second h2 must be var(--black) and font bold */
+
+h2 {
+  color: var(--black);
+  font-size: 64px;
+  letter-spacing: 5px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 400px;
+}
+
+.logo-container,
+.content-container {
+  text-align: center;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+}
+
+input {
+  padding: 12px 30px;
+  font-family: "AdiHaus";
+}
+
+button {
+  background-color: black;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+}
+
+#image-container {
+  width: 100%;
+  background: url("./img/mobile-shoes.jpg");
+  background-size: cover;
+  height: 200px;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 400px;
+  }
+
+  #image-container {
+    background: url("./img/shoes.webp");
+    background-size: cover;
+    width: 100%;
+    clip-path: polygon(100% 0, 0 0, 30% 100%, 100% 100%);
+    min-height: 100vh;
+  }
+}
