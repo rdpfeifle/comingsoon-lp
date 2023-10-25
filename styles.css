@@ -75,18 +75,31 @@ p {
 #logo {
   max-width: 100%;
   height: auto;
+  padding: 10px 0;
+}
+
+form {
+  display: flex;
+}
+
+input,
+button {
+  height: 50px;
 }
 
 input {
-  padding: 12px 30px;
+  margin-left: 10px;
+  padding: 0 30px;
   font-family: "AdiHaus";
+  width: 75%;
 }
 
 button {
   background-color: black;
   color: #fff;
-  padding: 12px 30px;
   border: none;
+  width: 20%;
+  font-weight: 700;
 }
 
 #desktop-image {
