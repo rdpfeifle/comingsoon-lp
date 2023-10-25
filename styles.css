@@ -22,7 +22,9 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 html,
 body {
   scroll-behavior: smooth;
@@ -38,9 +40,24 @@ body {
 Second h2 must be var(--black) and font bold */
 
 h2 {
-  color: var(--black);
   font-size: 64px;
   letter-spacing: 5px;
+  margin-top: 20px;
+}
+
+h2:nth-of-type(1) {
+  color: var(--blue-color);
+  font-weight: normal;
+}
+
+h2:nth-of-type(2) {
+  color: var(--black);
+  line-height: 1.1;
+}
+
+p {
+  line-height: 28px;
+  margin: 20px;
 }
 
 .main-container {
@@ -50,9 +67,8 @@ h2 {
 
 #mobile-image {
   width: 100%;
-  background: url("./img/mobile-shoes.jpg");
-  background-size: cover;
-  height: 200px;
+  background: url("./img/mobile-shoes.jpg") center/cover no-repeat;
+  padding-top: 75%;
   display: block;
 }
 
@@ -96,7 +112,17 @@ button {
   }
 
   .content-container {
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  .soon {
+    display: block;
   }
 
   #mobile-image {
