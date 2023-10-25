@@ -19,9 +19,12 @@
   --light-gray: #d8d8d8;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
 html,
 body {
-  margin: 0;
   scroll-behavior: smooth;
   font-family: "AdiHaus";
 }
@@ -29,7 +32,6 @@ body {
 body {
   background: url("./img/waves.webp");
   background-size: cover;
-  text-align: center;
 }
 
 /* First h2 must be var(--blue-color) and font normal
@@ -42,19 +44,21 @@ h2 {
 }
 
 .main-container {
-  display: flex;
-  flex-direction: column-reverse;
   min-height: 400px;
-}
-
-.logo-container,
-.content-container {
   text-align: center;
 }
 
+#mobile-image {
+  width: 100%;
+  background: url("./img/mobile-shoes.jpg");
+  background-size: cover;
+  height: 200px;
+  display: block;
+}
+
 #logo {
-  width: 50px;
-  height: 50px;
+  max-width: 100%;
+  height: auto;
 }
 
 input {
@@ -69,11 +73,8 @@ button {
   border: none;
 }
 
-#image-container {
-  width: 100%;
-  background: url("./img/mobile-shoes.jpg");
-  background-size: cover;
-  height: 200px;
+#desktop-image {
+  display: none;
 }
 
 /* Desktop styles */
@@ -81,14 +82,33 @@ button {
   .main-container {
     display: flex;
     flex-direction: row;
+    text-align: left;
     min-height: 400px;
   }
 
-  #image-container {
+  .logo-container,
+  .content-container {
+    padding: 40px;
+  }
+
+  .logo-container {
+    position: absolute;
+  }
+
+  .content-container {
+    margin-top: 100px;
+  }
+
+  #mobile-image {
+    display: none;
+  }
+
+  #desktop-image {
     background: url("./img/shoes.webp");
     background-size: cover;
     width: 100%;
     clip-path: polygon(100% 0, 0 0, 30% 100%, 100% 100%);
     min-height: 100vh;
+    display: block;
   }
 }
