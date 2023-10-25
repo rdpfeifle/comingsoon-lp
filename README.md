@@ -1,6 +1,6 @@
 # "Coming Soon" Landing Page
 
-A mobile first landing page.
+A mobile-first landing page.
 
 ## Mobile version
 
